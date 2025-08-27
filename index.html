@@ -29,20 +29,24 @@
     </head>
     <body class="bg-[#f5fff6] hind-madurai">
         <header class="mb-15">
-            <nav class="flex justify-between items-center py-6 px-14 bg-white">
-                <div class="left-nav flex justify-center items-center gap-5">
+            <nav
+                class="flex flex-col md:flex-row md:justify-between items-center py-6 px-14 bg-white"
+            >
+                <div
+                    class="left-nav flex justify-center items-center gap-3 md:gap-5"
+                >
                     <img
                         class="h-[50px] w-[50px]"
                         src="assets/logo.png"
                         alt=""
                     />
                     <h2 class="font-[900] text-xl text-[#006747]">
-                        Emergency <br />
+                        Emergency <br class="md:block hidden" />
                         Service
                     </h2>
                 </div>
                 <div
-                    class="right-nav flex justify-center items-center text-center gap-10"
+                    class="right-nav flex justify-center items-center text-center gap-3 md:gap-10 mt-4 md:mt-0"
                 >
                     <div
                         class="flex items-center gap-3 bg-[#41ff6b1a] py-2 px-5 rounded-3xl"
@@ -70,27 +74,31 @@
                 </div>
             </nav>
             <section
-                class="bg-gradient-to-r from-green-900 via-green-700 to-green-950 flex flex-col justify-center items-center text-center py-4 px-15"
+                class="bg-gradient-to-r from-green-900 via-green-700 to-green-950 flex flex-col justify-center items-center text-center py-4 px-9 md:px-15"
             >
                 <img
                     class="h-[92px] w-[92px]"
                     src="assets/logo-dark.png"
                     alt=""
                 />
-                <h1 class="text-[40px] font-[900] text-white">
+                <h1
+                    class="md:text-[40px] text-[30px] font-[700] md:font-[900] text-white"
+                >
                     Emergency Service Directory
                 </h1>
-                <p class="text-[20px] text-white">
+                <p class="md:text-[20px] text-white mt-3 md:mt-0">
                     Government Emergency Services at Your Fingertip – A Project
                     by Government of the People’s Republic of Bangladesh
                 </p>
             </section>
         </header>
         <main
-            class="max-w-[1280px] mx-auto flex min-h-[400px] p-10 gap-5 pb-20"
+            class="max-w-[1280px] mx-auto md:flex min-h-[400px] p-10 gap-5 pb-20"
         >
-            <div class="main-left w-[75%]">
-                <div class="main-cards grid grid-cols-3 gap-3">
+            <div class="main-left md:w-[75%]">
+                <div class="main-cards grid md:grid-cols-3 gap-3">
+
+                    <!-- card 1 -->
                     <div class="main-card bg-white p-5 shadow-lg">
                         <div class="card-header flex justify-between">
                             <div class="bg-slate-400 py-1 px-2 rounded-sm">
@@ -100,7 +108,11 @@
                                     alt=""
                                 />
                             </div>
-                            <p class="cursor-pointer text-xl"><i class="fa-regular fa-heart"></i></p>
+                            <p
+                                class="cursor-pointer text-2xl text-gray-500 hover:text-red-500 hover:scale-125 transition duration-300 ease-in-out"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </p>
                         </div>
                         <h3 class="mt-3 font-bold text-xl">
                             National Emergency Number
@@ -116,117 +128,244 @@
                             <!-- Copy Button -->
                             <button
                                 id="copyBtn"
-                                class="text-[10px] border border-gray-300 px-10 text-center py-2 flex items-center gap-1 rounded hover:bg-gray-100 active:scale-95 transition cursor-pointer"
+                                class="text-[10px] border border-gray-300 px-10 md:px-4 lg:px-10 midum-lg text-center py-2 flex items-center gap-1 rounded hover:bg-gray-100 active:scale-95 transition cursor-pointer"
                             >
                                 <i class="fa-solid fa-copy"></i> Copy
                             </button>
 
                             <!-- Call Button -->
                             <button
-                                class="text-[10px] bg-green-500 px-10 text-center py-2 text-white flex items-center gap-1 rounded hover:bg-green-600 active:scale-95 transition cursor-pointer"
+                                class="text-[10px] bg-green-500 px-10 md:px-5 lg:px-10 midum-lg text-center py-2 text-white flex items-center gap-1 rounded hover:bg-green-600 active:scale-95 transition cursor-pointer"
                             >
                                 <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
                     </div>
+
+                    <!-- card 2 -->
                     <div class="main-card bg-white p-5 shadow-lg">
-                        <div class="card-header">
-                            <img
-                                class="h-[30px] w-[30px]"
-                                src="assets/ambulance.png"
-                                alt=""
-                            />
+                        <div class="card-header flex justify-between">
+                            <div class="bg-slate-400 py-1 px-2 rounded-sm">
+                                <img
+                                    class="h-[20px] w-[15px]"
+                                    src="assets/ambulance.png"
+                                    alt=""
+                                />
+                            </div>
+                            <p
+                                class="cursor-pointer text-2xl text-gray-500 hover:text-red-500 hover:scale-125 transition duration-300 ease-in-out"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </p>
                         </div>
-                        <h3>National Emergency Number</h3>
-                        <p>National Emergency</p>
-                        <h3>999</h3>
-                        <p>Police</p>
-                        <div class="card-bottom">
-                            <button class="btn btn-outline">Default</button>
-                            <button class="btn btn-soft btn-success">
-                                Success
+                        <h3 class="mt-3 font-bold text-xl">
+                            National Emergency Number
+                        </h3>
+                        <p class="mt-2">National Emergency</p>
+                        <h3 class="font-bold text-3xl mt-3">999</h3>
+                        <div
+                            class="bg-slate-300 inline-block px-2 py-1 rounded-4xl mb-3 mt-3"
+                        >
+                            <p class="text-[10px]">Police</p>
+                        </div>
+                        <div class="card-bottom flex justify-between mt-3">
+                            <!-- Copy Button -->
+                            <button
+                                id="copyBtn"
+                                class="text-[10px] border border-gray-300 px-10 md:px-4 lg:px-10 midum-lg text-center py-2 flex items-center gap-1 rounded hover:bg-gray-100 active:scale-95 transition cursor-pointer"
+                            >
+                                <i class="fa-solid fa-copy"></i> Copy
+                            </button>
+
+                            <!-- Call Button -->
+                            <button
+                                class="text-[10px] bg-green-500 px-10 md:px-4 lg:px-10 midum-lg text-center py-2 text-white flex items-center gap-1 rounded hover:bg-green-600 active:scale-95 transition cursor-pointer"
+                            >
+                                <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
                     </div>
+
+                    <!-- card 3 -->
                     <div class="main-card bg-white p-5 shadow-lg">
-                        <div class="card-header">
-                            <img
-                                class="h-[30px] w-[30px]"
-                                src="assets/ambulance.png"
-                                alt=""
-                            />
+                        <div class="card-header flex justify-between">
+                            <div class="bg-slate-400 py-1 px-2 rounded-sm">
+                                <img
+                                    class="h-[20px] w-[15px]"
+                                    src="assets/ambulance.png"
+                                    alt=""
+                                />
+                            </div>
+                            <p
+                                class="cursor-pointer text-2xl text-gray-500 hover:text-red-500 hover:scale-125 transition duration-300 ease-in-out"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </p>
                         </div>
-                        <h3>National Emergency Number</h3>
-                        <p>National Emergency</p>
-                        <h3>999</h3>
-                        <p>Police</p>
-                        <div class="card-bottom">
-                            <button class="btn btn-outline">Default</button>
-                            <button class="btn btn-soft btn-success">
-                                Success
+                        <h3 class="mt-3 font-bold text-xl">
+                            National Emergency Number
+                        </h3>
+                        <p class="mt-2">National Emergency</p>
+                        <h3 class="font-bold text-3xl mt-3">999</h3>
+                        <div
+                            class="bg-slate-300 inline-block px-2 py-1 rounded-4xl mb-3 mt-3"
+                        >
+                            <p class="text-[10px]">Police</p>
+                        </div>
+                        <div class="card-bottom flex justify-between mt-3">
+                            <!-- Copy Button -->
+                            <button
+                                id="copyBtn"
+                                class="text-[10px] border border-gray-300 px-10 md:px-4 lg:px-10 midum-lg text-center py-2 flex items-center gap-1 rounded hover:bg-gray-100 active:scale-95 transition cursor-pointer"
+                            >
+                                <i class="fa-solid fa-copy"></i> Copy
+                            </button>
+
+                            <!-- Call Button -->
+                            <button
+                                class="text-[10px] bg-green-500 px-10 md:px-4 lg:px-10 midum-lg text-center py-2 text-white flex items-center gap-1 rounded hover:bg-green-600 active:scale-95 transition cursor-pointer"
+                            >
+                                <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
                     </div>
+
+                    <!-- card 4 -->
                     <div class="main-card bg-white p-5 shadow-lg">
-                        <div class="card-header">
-                            <img
-                                class="h-[30px] w-[30px]"
-                                src="assets/ambulance.png"
-                                alt=""
-                            />
+                        <div class="card-header flex justify-between">
+                            <div class="bg-slate-400 py-1 px-2 rounded-sm">
+                                <img
+                                    class="h-[20px] w-[15px]"
+                                    src="assets/ambulance.png"
+                                    alt=""
+                                />
+                            </div>
+                            <p
+                                class="cursor-pointer text-2xl text-gray-500 hover:text-red-500 hover:scale-125 transition duration-300 ease-in-out"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </p>
                         </div>
-                        <h3>National Emergency Number</h3>
-                        <p>National Emergency</p>
-                        <h3>999</h3>
-                        <p>Police</p>
-                        <div class="card-bottom">
-                            <button class="btn btn-outline">Default</button>
-                            <button class="btn btn-soft btn-success">
-                                Success
+                        <h3 class="mt-3 font-bold text-xl">
+                            National Emergency Number
+                        </h3>
+                        <p class="mt-2">National Emergency</p>
+                        <h3 class="font-bold text-3xl mt-3">999</h3>
+                        <div
+                            class="bg-slate-300 inline-block px-2 py-1 rounded-4xl mb-3 mt-3"
+                        >
+                            <p class="text-[10px]">Police</p>
+                        </div>
+                        <div class="card-bottom flex justify-between mt-3">
+                            <!-- Copy Button -->
+                            <button
+                                id="copyBtn"
+                                class="text-[10px] border border-gray-300 px-10 md:px-4 lg:px-10 midum-lg text-center py-2 flex items-center gap-1 rounded hover:bg-gray-100 active:scale-95 transition cursor-pointer"
+                            >
+                                <i class="fa-solid fa-copy"></i> Copy
+                            </button>
+
+                            <!-- Call Button -->
+                            <button
+                                class="text-[10px] bg-green-500 px-10 md:px-4 lg:px-10 midum-lg text-center py-2 text-white flex items-center gap-1 rounded hover:bg-green-600 active:scale-95 transition cursor-pointer"
+                            >
+                                <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
                     </div>
+
+                    <!-- card 5 -->
                     <div class="main-card bg-white p-5 shadow-lg">
-                        <div class="card-header">
-                            <img
-                                class="h-[30px] w-[30px]"
-                                src="assets/ambulance.png"
-                                alt=""
-                            />
+                        <div class="card-header flex justify-between">
+                            <div class="bg-slate-400 py-1 px-2 rounded-sm">
+                                <img
+                                    class="h-[20px] w-[15px]"
+                                    src="assets/ambulance.png"
+                                    alt=""
+                                />
+                            </div>
+                            <p
+                                class="cursor-pointer text-2xl text-gray-500 hover:text-red-500 hover:scale-125 transition duration-300 ease-in-out"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </p>
                         </div>
-                        <h3>National Emergency Number</h3>
-                        <p>National Emergency</p>
-                        <h3>999</h3>
-                        <p>Police</p>
-                        <div class="card-bottom">
-                            <button class="btn btn-outline">Default</button>
-                            <button class="btn btn-soft btn-success">
-                                Success
+                        <h3 class="mt-3 font-bold text-xl">
+                            National Emergency Number
+                        </h3>
+                        <p class="mt-2">National Emergency</p>
+                        <h3 class="font-bold text-3xl mt-3">999</h3>
+                        <div
+                            class="bg-slate-300 inline-block px-2 py-1 rounded-4xl mb-3 mt-3"
+                        >
+                            <p class="text-[10px]">Police</p>
+                        </div>
+                        <div class="card-bottom flex justify-between mt-3">
+                            <!-- Copy Button -->
+                            <button
+                                id="copyBtn"
+                                class="text-[10px] border border-gray-300 px-10 md:px-4 lg:px-10 midum-lg text-center py-2 flex items-center gap-1 rounded hover:bg-gray-100 active:scale-95 transition cursor-pointer"
+                            >
+                                <i class="fa-solid fa-copy"></i> Copy
+                            </button>
+
+                            <!-- Call Button -->
+                            <button
+                                class="text-[10px] bg-green-500 px-10 md:px-4 lg:px-10 midum-lg text-center py-2 text-white flex items-center gap-1 rounded hover:bg-green-600 active:scale-95 transition cursor-pointer"
+                            >
+                                <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
                     </div>
+
+                    <!-- card 6 -->
                     <div class="main-card bg-white p-5 shadow-lg">
-                        <div class="card-header">
-                            <img
-                                class="h-[30px] w-[30px]"
-                                src="assets/ambulance.png"
-                                alt=""
-                            />
+                        <div class="card-header flex justify-between">
+                            <div class="bg-slate-400 py-1 px-2 rounded-sm">
+                                <img
+                                    class="h-[20px] w-[15px]"
+                                    src="assets/ambulance.png"
+                                    alt=""
+                                />
+                            </div>
+                            <p
+                                class="cursor-pointer text-2xl text-gray-500 hover:text-red-500 hover:scale-125 transition duration-300 ease-in-out"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </p>
                         </div>
-                        <h3>National Emergency Number</h3>
-                        <p>National Emergency</p>
-                        <h3>999</h3>
-                        <p>Police</p>
-                        <div class="card-bottom">
-                            <button class="btn btn-outline">Default</button>
-                            <button class="btn btn-soft btn-success">
-                                Success
+                        <h3 class="mt-3 font-bold text-xl">
+                            National Emergency Number
+                        </h3>
+                        <p class="mt-2">National Emergency</p>
+                        <h3 class="font-bold text-3xl mt-3">999</h3>
+                        <div
+                            class="bg-slate-300 inline-block px-2 py-1 rounded-4xl mb-3 mt-3"
+                        >
+                            <p class="text-[10px]">Police</p>
+                        </div>
+                        <div class="card-bottom flex justify-between mt-3">
+                            <!-- Copy Button -->
+                            <button
+                                id="copyBtn"
+                                class="text-[10px] border border-gray-300 px-10 md:px-4 lg:px-10 midum-lg text-center py-2 flex items-center gap-1 rounded hover:bg-gray-100 active:scale-95 transition cursor-pointer"
+                            >
+                                <i class="fa-solid fa-copy"></i> Copy
+                            </button>
+
+                            <!-- Call Button -->
+                            <button
+                                class="text-[10px] bg-green-500 px-10 md:px-4 lg:px-10 midum-lg text-center py-2 text-white flex items-center gap-1 rounded hover:bg-green-600 active:scale-95 transition cursor-pointer"
+                            >
+                                <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="main-right w-[25%] bg-white px-3 pt-5">
+
+
+            <div class="main-right md:w-[25%] bg-white px-3 py-5 mt-10 md:mt-0">
                 <div
                     class="main-right-header flex justify-between items-center"
                 >
