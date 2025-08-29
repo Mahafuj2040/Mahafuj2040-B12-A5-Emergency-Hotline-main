@@ -33,7 +33,7 @@ for (const callButton of callButtons) {
             );
         } else {
             let countedCoin = parseInt(cion.innerText) - 20;
-            alert(`Calling ${subTitle} number ${number}.....`);
+            alert(`📞 Calling ${subTitle} number ${number}.....`);
             cion.innerText = countedCoin;
 
             const obj = {
@@ -61,7 +61,7 @@ for (const copyButton of copyButtons) {
 
         navigator.clipboard.writeText(numberToCopy);
         copy++;
-        alert(`${number} copied`);
+        alert(`📄 ${number} copied`);
         copyCount.innerText = `${copy}`;
     });
 }
@@ -96,17 +96,3 @@ function CallHistory() {
     }
 }
 
-// Love button trash
-// for (const btn of loveButtons) {
-//     btn.addEventListener("click", function () {
-//         if (this.classList.contains("red")) {
-//             this.classList.remove("red");
-//             countHeart--;
-//             document.getElementById("heart-count").innerText = countHeart;
-//         } else {
-//             this.classList.add("red");
-//             countHeart++;
-//             document.getElementById("heart-count").innerText = countHeart;
-//         }
-//     });
-// }
