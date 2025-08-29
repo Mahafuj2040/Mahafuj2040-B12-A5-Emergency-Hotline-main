@@ -9,11 +9,17 @@ const loveButtons = document.querySelectorAll(".love-btn");
 
 for (const btn of loveButtons) {
     btn.addEventListener("click", function () {
-        countHeart++;
-        document.getElementById("heart-count").innerText = countHeart;
+        if (this.classList.contains("red")) {
+            this.classList.remove("red");
+            countHeart--;
+            document.getElementById("heart-count").innerText = countHeart;
+        } else {
+            this.classList.add("red");
+            countHeart++;
+            document.getElementById("heart-count").innerText = countHeart;
+        }
     });
 }
-
 // Call Button functionality
 const callButtons = document.querySelectorAll(".main-card .call-btn");
 
@@ -95,4 +101,3 @@ function CallHistory() {
         container.appendChild(card);
     }
 }
-
